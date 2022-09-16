@@ -29,7 +29,7 @@ export const CategoryWrapper = styled.div`
 export const CategoryTittle = styled.h2`
   color: var(--BlueColor);
   font-weight: 400;
-  font-size: 35px;
+  font-size: 60px;
   line-height: 72px;
   letter-spacing: 0.04em;
   display:flex;
