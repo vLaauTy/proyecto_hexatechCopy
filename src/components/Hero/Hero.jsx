@@ -1,31 +1,49 @@
-import React, {useState} from 'react'
-import Video from '../../videos/video.mp4'
-import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements'
-import { Button } from '../ButtonElements'
+import React, { useState } from "react";
+import Video from "../../videos/video.mp4";
+import {
+  HeroContainer,
+  HeroBg,
+  VideoBg,
+  HeroContent,
+  HeroH1,
+  HeroP,
+  HeroText,
+  HeroImage,
+  Image,
+  HeroTextWrapper,
+  HeroWrapper,
+  Form2,
+  Form1,
+} from "./HeroElements";
+
 
 const Hero = () => {
   const [hover, setHover] = useState(false);
 
   const onHover = () => {
-    setHover(!hover)
-  }
+    setHover(!hover);
+  };
 
   return (
-    <HeroContainer id='home'>
-      <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
-      </HeroBg>
-      <HeroContent>
-        <HeroH1> Virtual Banking Make Easy</HeroH1>
-        <HeroP>Sign up for a new accoun today and recive $250 in credit towards your next payment</HeroP>
-        <HeroBtnWrapper>
-          <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'               smooth={true} duration={500} spy={true} exact='true' offset={-80}>
-            Get Started {hover ? <ArrowForward /> : <ArrowRight/>}
-          </Button>
-        </HeroBtnWrapper>
+    <HeroContainer id="home">
+   
+      <HeroContent id='c'>
+        <HeroText>
+          <HeroTextWrapper>
+            <HeroP>Brindamos productos de </HeroP>
+            <HeroH1> CALIDAD Y DURABILIDAD</HeroH1>
+          </HeroTextWrapper>
+        </HeroText>
+        <HeroImage id='i'>
+          <HeroWrapper id='e'>
+            <Image src='./assets/Rectangle 5.png'></Image>
+            <Form1 initial={{x: -100, opacity: 0}} whileInView={{x:0, opacity:1, transition:{duration:1.7}}} viewport={{once:false}}></Form1>
+            <Form2 initial={{x: -100, opacity: 0}} whileInView={{x:0, opacity:1, transition:{duration:1.7}}} viewport={{once:false}}></Form2>
+            </HeroWrapper>
+        </HeroImage>
       </HeroContent>
     </HeroContainer>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
