@@ -14,6 +14,8 @@ import {
   HeroWrapper,
   Form2,
   Form1,
+  PolygonImage,
+  ButtonHexa,
 } from "./HeroElements";
 
 
@@ -23,6 +25,12 @@ const Hero = () => {
   const onHover = () => {
     setHover(!hover);
   };
+
+  const variants = {
+    initial  : {x: -100, opacity: 0},
+    whileInView:{x:0, opacity:1, transition:{duration:1}},
+    
+  } 
 
   return (
     <HeroContainer id="home">
@@ -37,10 +45,13 @@ const Hero = () => {
         <HeroImage id='i'>
           <HeroWrapper id='e'>
             <Image src='./assets/Rectangle 5.png'></Image>
-            <Form1 initial={{x: -100, opacity: 0}} whileInView={{x:0, opacity:1, transition:{duration:1.7}}} viewport={{once:false}}></Form1>
-            <Form2 initial={{x: -100, opacity: 0}} whileInView={{x:0, opacity:1, transition:{duration:1.7}}} viewport={{once:false}}></Form2>
+            <Form1 variants={variants} initial="initial" whileInView="whileInView" viewport="viewport"></Form1>
+            <Form2 variants={variants} initial="initial" whileInView="whileInView" viewport="viewport"></Form2>
+            
             </HeroWrapper>
+            
         </HeroImage>
+        <ButtonHexa to='contacto'>CONTÁCTANOS</ButtonHexa>
       </HeroContent>
     </HeroContainer>
   );
