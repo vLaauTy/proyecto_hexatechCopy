@@ -34,6 +34,11 @@ height: 100vh;
   @media screen and (max-width: 400px) {
     height: 90vh;
   }
+
+  @media screen and (max-height:800px) {
+ 
+ height:110vh;
+}
 `;
 
 export const HeroContent = styled.div`
@@ -613,6 +618,14 @@ height: 60px;
   top:390px;
   font-size: 30px;
   width: 230px;
+height: 60px;
+}
+
+@media screen and (max-height:800px) {
+ 
+ top:320px;
+ font-size: 30px;
+ width: 230px;
 height: 60px;
 }
 
