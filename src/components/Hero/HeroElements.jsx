@@ -115,12 +115,23 @@ height: 603px;
   @media screen and (max-width: 1280px) {
     left:770px;
   }
+  @media screen and (max-width: 1190px) {
+    left:730px;
+    width: 380px;
+    height: 531px;
+    top: 7%;
+  }
+
+  @media screen and (max-width: 1050px) {
+    left:620px;
+    width: 380px;
+    height: 531px;
+    top: 7%;
+  }
 
   @media screen and (max-width: 1040px) {
     width: 380px;
     height: 531px;
-    top: 3%;
-    left: 23%;
   }
 
   @media screen and (max-width: 1024px) {
@@ -177,7 +188,7 @@ export const HeroH1 = styled.h1`
   line-height: 100px;
   letter-spacing: 0.04em;
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1360px) {
     font-size: 100px;
     letter-spacing: 0.01rem;
     line-height: 80px;
@@ -186,8 +197,8 @@ export const HeroH1 = styled.h1`
 
   @media screen and (max-width: 1200px) {
     letter-spacing: 0.02rem;
-    line-height: 100px;
-    font-size: 100px;
+    line-height: 90px;
+    font-size: 90px;
   }
 
   @media screen and (max-width: 1040px) {
@@ -333,11 +344,28 @@ export const HeroWrapper = styled.div`
   height: 100%;
 }
 
+@media screen and (max-width: 1550px) {
+  width:780px;
+}
+
 @media screen and (max-width: 1440px) {
   width:740px;
 }
 
 
+@media screen and (max-width: 1190px) {
+    
+    width:660px;
+    height: 90%;
+
+  }
+
+  @media screen and (max-width: 1080px) {
+    
+    width:610px;
+    height: 90%;
+
+  }
   @media screen and (max-width: 1024px) {
     position:absolute;
     
@@ -457,6 +485,10 @@ export const Form1 = styled(Form)`
 
   @media screen and (max-width: 1280px) {
     left:700px;
+  }
+
+  @media screen and (max-width: 1050px) {
+    left:600px;
   }
 
   @media screen and (max-width: 1024px) {

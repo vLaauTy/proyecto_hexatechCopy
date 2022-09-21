@@ -78,8 +78,16 @@ export const CategoryCard = styled.div`
     &:nth-child(2) {
       margin: 20px;
     }
-    width: 370px;
-    height: 500px;
+    width: 320px;
+    height: 450px;
+  }
+
+  @media screen and (max-width: 1090px) {
+    &:nth-child(2) {
+      margin: 20px;
+    }
+    width: 290px;
+    height: 420px;
   }
 
   @media screen and (max-width: 1024px) {
@@ -146,6 +154,9 @@ export const CategoryName = styled.h3`
     transition:all 0.3s ease-in-out;
   }
 
+  @media screen and (max-width: 1090px) {
+    font-size: 40px;
+  }
   @media screen and (max-width: 1024px) {
     font-size: 35px;
   }
@@ -165,6 +176,10 @@ export const CategoryDescription = styled.p`
   font-style:normal;
   
 
+  @media screen and (max-width: 1090px) {
+    font-size: 25px;
+    line-height: 29px;
+  }
   @media screen and (max-width: 1024px) {
     font-size: 20px;
     line-height: 24px;
@@ -209,11 +224,17 @@ position:absolute;
   margin-left: 40px;
   }
 
+  @media screen and (max-width: 1090px) {
+    height: 225px;
+  width: 225px;
+  margin-left: 30px;
+  top:100px;
+  }
+
   @media screen and (max-width: 1024px) {
     width: 200px;
     height: 200px;
     margin-left: 40px;
-    top:100px;
   }
 
   @media screen and (max-width: 768px) {
@@ -256,6 +277,15 @@ width: 238px;
 margin-left:70px;
   }
 
+  @media screen and (max-width:1090px) {
+    height: 250px;
+width: 170px;
+margin-left:70px;
+margin-top:30px;
+  }
+
+  
+
   @media screen and (max-width:1024px) {
     height: 230px;
 width: 150px;
@@ -289,12 +319,14 @@ margin-top:10px;
     top:230px;
   }
 
-  @media screen and (max-width:1024px) {
+  @media screen and (max-width:1090px) {
     left:90px;
     top:230px;
     width:140px;
     height:110px;
   }
+
+ 
 
   @media screen and (max-width:768px) {
     left:110px;
