@@ -67,7 +67,7 @@ const ProductCards = () => {
 
               <CategoryCard>
                 <CategoryCardInfo>
-                  <CategoryIcon src='./assets/Temperatura-claro.png' />
+                  <CategoryIcon src='./assets/Quimica-claro.png' />
                   <CategoryName>Hexa Chem</CategoryName>
                   <CategoryDescription>
                     En esta sección podrá encontrar toda nuestra línea exclusiva
