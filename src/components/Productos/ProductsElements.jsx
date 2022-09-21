@@ -11,6 +11,7 @@ export const CategoryContainer = styled.div`
   @media screen and (max-width:768px) {
     padding:10px;
     position:relative;
+    align-items:center;
   }
 `;
 
@@ -18,11 +19,14 @@ export const CategoryWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+ width:100%;
+ height:100%;
  
-  margin-bottom: 180px;
+  
 
   @media screen and (max-width:768px) {
     position:relative;
+    justify-content:center;
   }
 `;
 
@@ -35,13 +39,23 @@ export const CategoryTittle = styled.h2`
   display:flex;
   justify-content:flex-start;
   align-items:flex-start;
+  margin-top:20px;
+
+  @media screen and (max-width:768px) {
+    font-size: 35px;
+  }
 `;
 
 export const CategoryCards = styled.div`
+height:100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-bottom:100px;
+  
 
+  @media screen and (max-width:1024px) {
+    margin-bottom:250px;
+  }
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -49,29 +63,39 @@ export const CategoryCards = styled.div`
 
 export const CategoryCard = styled.div`
   background: #ffffff;
-  width: 370px;
-  height: 450px;
+  width: 434px;
+  height: 585px;
   text-decoration: none;
   box-shadow: 5px 5px 20px rgba(50, 64, 147, 0.1);
 
   &:nth-child(2) {
-    margin: 50px;
+    margin: 0 20px;
   }
 
-  @media screen and (max-width: 1275px) {
+  
+
+  @media screen and (max-width: 1280px) {
     &:nth-child(2) {
       margin: 20px;
     }
-    width: 310px;
-    height: 400px;
+    width: 370px;
+    height: 500px;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1024px) {
     &:nth-child(2) {
       margin: 10px;
     }
-    width: 230px;
-    height: 380px;
+    width: 300px;
+    height: 430px;
+  }
+
+  @media screen and (max-width: 900px) {
+    &:nth-child(2) {
+      margin: 10px;
+    }
+    width: 270px;
+    height: 400px;
   }
 `;
 
@@ -80,6 +104,13 @@ export const CategoryCardInfo = styled.div`
   flex-direction: column;
   padding: 0;
   align-items: flex-start;
+
+  /* &:hover .h  {
+    color:var(--BlueColor)
+    
+  } */
+
+  
 `;
 
 export const CategoryIcon = styled.img`
@@ -104,12 +135,18 @@ export const CategoryIcon = styled.img`
 export const CategoryName = styled.h3`
   font-size: 50px;
   margin: 0 30px;
-  color: var(--BlueColor);
+  color: #6C6C6C;
   font-weight: 400;
   line-height: 72px;
   letter-spacing: 0.04em;
+  transition:all 0.3s ease-in-out;
 
-  @media screen and (max-width: 1000px) {
+  ${CategoryCardInfo}:hover & {
+    color:var(--BlueColor);
+    transition:all 0.3s ease-in-out;
+  }
+
+  @media screen and (max-width: 1024px) {
     font-size: 35px;
   }
 
@@ -119,15 +156,18 @@ export const CategoryName = styled.h3`
 `;
 
 export const CategoryDescription = styled.p`
-  font-size: 20px;
+  font-size: 30px;
   margin: 0 30px;
   color: var(--BlueColor);
   font-weight: 300;
   color: #747474;
+  line-height: 36px;
+  font-style:normal;
   
 
-  @media screen and (max-width: 1000px) {
-    font-size: 18px;
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+    line-height: 24px;
   }
 
   @media screen and (max-width:768){
@@ -137,84 +177,140 @@ export const CategoryDescription = styled.p`
 
 export const CategoryImageContainer = styled.div`
   display:inline-block;
-  
+  position: absolute;
+  bottom:360px;
 
+
+  
   @media screen and (min-width:768px) {
+    
     position:relative;
   }
 `;
 
 export const CategoryImage = styled.img`
+position:absolute;
+  height: 322px;
+  width: 322px;
+  margin-left: 60px;
+  transition:all 0.3s ease-in-out;
+ 
 
-  height: 225px;
-  width: 275px;
-  margin-left: 40px;
+ ${CategoryCardInfo}:hover & {
+  transform: translateY(-20px);
+    transition:all 0.3s ease-in-out;
+  }
+
   
 
-  @media screen and (max-width: 1275px) {
-    width: 160px;
-    height: 160px;
+  @media screen and (max-width: 1280px) {
+    height: 300px;
+  width: 300px;
+  margin-left: 40px;
   }
 
-  @media screen and (max-width: 1000px) {
-    width: 100px;
-    height: 100px;
-    margin-left: 60px;
+  @media screen and (max-width: 1024px) {
+    width: 200px;
+    height: 200px;
+    margin-left: 40px;
+    top:100px;
   }
 
   @media screen and (max-width: 768px) {
-    width: 225px;
-    height: 170px;
-    margin-left: 35px;
-    bottom:-28%;
+    width: 200px;
+    height: 200px;
+    margin-left: 70px;
+    top:190px;
     position:absolute;
   }
-`;
 
-export const CategoryButton = styled.a`
-  position: absolute;
-  bottom:0;
-  left: 7em;
-  background: var(--OrangeColor);
-  width: 100px;
-  height: 40px;
-  clip-path: polygon(
-    20% 0,
-    83% 0,
-    100% 30%,
-    100% 70%,
-    83% 100%,
-    20% 100%,
-    0% 70%,
-    0% 30%
-  );
-  color: white;
-  text-transform: uppercase;
-  padding: 1em 1em;
-  outline: 10px;
-
-  @media screen and (max-width: 1000px) {
-    width: 70px;
-    height: 20px;
-    left: 7em;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 70px;
-    height: 20px;
-    left: 5em;
-    bottom:-28%;
+  @media screen and (max-width:380px) {
+    width: 180px;
+    height: 180px;
+    margin-left: 50px;
+    top:220px;
   }
 `;
 
-export const ButtonText = styled.span`
-  position: absolute;
-  top: 0;
-  font-size: 36px;
-  font-weight: 300;
 
-  @media screen and (max-width: 1000px) {
-    font-size: 20px;
+
+export const CategoryPolygon=styled.div`
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+ margin-top:60px;
+ margin-left:90px;
+ border-radius: 10px;
+  background: #C8C9DA;
+  height: 346px;
+width: 263px;
+transform:rotate(90deg);
+transition:all 0.3s ease-in-out;
+
+${CategoryCardInfo}:hover & {
+    background:var(--BlueColor);
+    transition:all 0.3s ease-in-out;
+  } 
+
+  @media screen and (max-width:1280px) {
+    height: 320px;
+width: 238px;
+margin-left:70px;
   }
-`;
 
+  @media screen and (max-width:1024px) {
+    height: 230px;
+width: 150px;
+margin-left:70px;
+  }
+
+  @media screen and (max-width:768px) {
+    height: 230px;
+width: 150px;
+margin-left:100px;
+margin-top:10px;
+  }
+
+  @media screen and (max-width:380px) {
+    height: 210px;
+width: 130px;
+margin-left:80px;
+margin-top:10px;
+  }
+
+`;
+ export const CategoryButtonimg=styled.img`
+  cursor: pointer;
+  position:absolute;
+  pointer-events:all;
+  top:250px;
+  left:140px;
+
+  @media screen and (max-width:1280px) {
+    left:110px;
+    top:230px;
+  }
+
+  @media screen and (max-width:1024px) {
+    left:90px;
+    top:230px;
+    width:140px;
+    height:110px;
+  }
+
+  @media screen and (max-width:768px) {
+    left:110px;
+    top:300px;
+    width:130px;
+    height:100px;
+  }
+
+  
+  @media screen and (max-width:380px) {
+    left:110px;
+    top:300px;
+    width:120px;
+    height:90px;
+    top:320px;
+  }
+
+
+ `;

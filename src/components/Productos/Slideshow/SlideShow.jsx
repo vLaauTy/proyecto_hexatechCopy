@@ -117,7 +117,12 @@ export const Controles = styled.div`
   pointer-events:none;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
+  margin-top:40px;
+
+  @media screen and (max-width:380px) {
+    margin-top:80px;
+  }
 `;
 
 export const Boton = styled.button`
@@ -139,6 +144,7 @@ export const Boton = styled.button`
   align-items: center;
   color: #fff;
   font-size:1.5rem;
+  z-index:99;
 
   &:focus {
     outline: none;
@@ -166,8 +172,8 @@ export const CategoryCardsMobile = styled.div`
 export const CategoryCardMobile = styled.div`
   background: #fff;
   min-width: 100%;
-  width: 100px;
-  height: 380px;
+  width: 120px;
+  height: 410px;
 
   box-shadow: 5px 5px 20px rgba(50, 64, 147, 0.1);
   position: relative;
@@ -176,6 +182,11 @@ export const CategoryCardMobile = styled.div`
   transition: 0.3s ease all;
 
   text-align: left;
+
+  @media screen and (max-width:380px) {
+    width: 100px;
+  height: 380px;
+  }
 `;
 
 export { Slideshow };

@@ -7,11 +7,10 @@ export const Nav = styled.nav`
   background: ${({scrollNav}) => (scrollNav ? '#324093' : 'transparent')};
  background:var(--BlueColor200);
   height: 140px;
-  margin-top: -140px;
   display:flex;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+  position: absolute;
   top:0;
   left:0;
   z-index:10;
@@ -88,13 +87,15 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
   margin:0 4rem;
   font-family:'Teko', sans-serif;
-  font-weight:500;
-  font-size:20px;
+  font-weight:300;
+  font-size:30px;
   line-height:100px;
+  transition:all 100ms ease-out;
 
-  &.active {
+  &:hover {
     border-bottom: 3px solid var(--BlueColor);
     color:var(--BlueColor);
+    transition:all 100ms ease-out;
   }
 
   @media screen and (max-width: 1000px) {

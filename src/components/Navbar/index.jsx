@@ -43,7 +43,7 @@ const Navbar = ({ toggle }) => {
   return (
     <>
       <IconContext.Provider value={{ color: "#324093" }}>
-        <Nav scrollNav={scrollNav}>
+        <Nav >
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
               <NavIcon src="./assets/logo.png" />
@@ -56,11 +56,7 @@ const Navbar = ({ toggle }) => {
               <NavItem>
                 <NavLinks
                   to="home"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
+                  
                 >
                   Inicio
                 </NavLinks>
@@ -68,11 +64,7 @@ const Navbar = ({ toggle }) => {
               <NavItem>
                 <NavLinks
                   to="nosotros"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
+                  
                 >
                   Nosotros
                 </NavLinks>
@@ -80,11 +72,7 @@ const Navbar = ({ toggle }) => {
               <NavItem>
                 <NavLinks
                   to="productos"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
+                  
                 >
                   Productos
                 </NavLinks>
@@ -92,11 +80,7 @@ const Navbar = ({ toggle }) => {
               <NavItem>
                 <NavLinks
                   to="contacto"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
+                  
                 >
                   Contacto
                 </NavLinks>
