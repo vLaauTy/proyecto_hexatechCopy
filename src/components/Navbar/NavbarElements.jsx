@@ -6,9 +6,11 @@ import { FaMagento } from 'react-icons/fa'
 export const Nav = styled.nav`
   background: ${({scrollNav}) => (scrollNav ? '#324093' : 'transparent')};
  background:var(--BlueColor200);
-  height: 140px;
+  height: 108px;
+  
   display:flex;
   align-items: center;
+  justify-content:center;
   font-size: 1rem;
   position: absolute;
   top:0;
@@ -19,6 +21,10 @@ export const Nav = styled.nav`
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   }
+
+  @media screen and (min-width: 1680px) {
+    left:none;
+  }
 `
 
 export const NavbarContainer = styled.div`
@@ -26,7 +32,7 @@ export const NavbarContainer = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   max-width: 1700px;
 `
 export const NavLogo = styled(LinkR) `
@@ -108,13 +114,15 @@ export const NavLinks = styled(LinkS)`
 `
 export const NavIcon = styled.img `
     margin-right:1rem;
-    font-size:3rem;
+    font-size:2.5rem;
+    width:72px;
+    height:72px;
 `;
 
 export const NavText=styled.span`
 color:var(--BlueColor);
-font-weight:500;
-font-size:20px;
+font-weight:400;
+font-size:25px;
 width:10%;
   font-weight:400;
   letter-spacing:1.5px;
