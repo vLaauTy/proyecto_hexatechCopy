@@ -345,7 +345,7 @@ margin-top:10px;
 
   @media screen and (max-width:768px) {
     left:110px;
-    top:20rem;
+   
     width:130px;
     height:100px;
   }
