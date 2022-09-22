@@ -82,19 +82,19 @@ export const NavMenu = styled.ul`
 `
 export const NavItem = styled.li`
   height: 80px;
-  padding:1.5rem 0;
+  padding:1rem 0;
 `
 export const NavLinks = styled(LinkS)`
   color: var(--NavLinkOff);
   display: flex;
   align-items: center;
-  padding: 0 0.2rem;
+  padding: 0 ;
   height: 100%;
   cursor: pointer;
-  margin:0 4rem;
+  margin:0 3rem;
   font-family:'Teko', sans-serif;
   font-weight:300;
-  font-size:30px;
+  font-size:1.5rem;
   line-height:100px;
   transition:all 100ms ease-out;
 
@@ -115,8 +115,8 @@ export const NavLinks = styled(LinkS)`
 export const NavIcon = styled.img `
     margin-right:1rem;
     font-size:2.5rem;
-    width:72px;
-    height:72px;
+    width:60px;
+    height:60px;
 `;
 
 export const NavText=styled.span`

@@ -82,7 +82,7 @@ export const HeroText = styled.div`
   position: absolute;
   width: 656px;
   height: 200px;
-
+  top:15rem;
   margin-left: 165px;
 
   @media screen and (max-width: 1440px) {
@@ -265,7 +265,7 @@ margin: auto;
 
 export const HeroH1 = styled(motion.h1)`
   color: var(--BlueColor);
-  font-size: 120px;
+  font-size: 7rem;
   font-style: normal;
   font-weight: 500;
   line-height: 100px;
@@ -723,7 +723,7 @@ export const ButtonHexa = styled(LinkS)`
   width: 385px;
   height: 72px;
   margin-left: 164px;
-  top: 630px;
+  top: 550px;
   padding: 16px 24px;
   border: none;
   border-radius: 10px;
