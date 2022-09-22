@@ -52,11 +52,12 @@ const Productos = () => {
                     <CategoryImageContainer>
                       
                     <CategoryImage src={product.img}></CategoryImage>
-                    <CategoryButtonimg
+                    <a href="https://www.esthersola.com/css-centrar-postion-absolute/"><CategoryButtonimg
                       onMouseEnter={() => setMouse(true)}
                       onMouseLeave={() => setMouse(false)}
                       src={mouse ? "./assets/BotonFlecha.png" : "./assets/BotonVer.png"}
-                    ></CategoryButtonimg>
+                    ></CategoryButtonimg></a>
+                    
                   </CategoryImageContainer>
                   </CategoryCardInfo>
                 </CategoryCardMobile>

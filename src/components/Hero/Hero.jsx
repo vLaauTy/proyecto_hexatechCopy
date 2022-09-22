@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Video from "../../videos/video.mp4";
 import {
   HeroContainer,
   HeroBg,
@@ -27,9 +26,12 @@ const Hero = () => {
   };
 
   const variants = {
-    initial  : {x: -100, opacity: 0},
+    initial  : {x: 100, opacity: 0},
     whileInView:{x:0, opacity:1, transition:{duration:1}},
-    
+    initial2: {x: -100, opacity: 0},
+    initialText: {y:-100, opacity:0},
+    whileInViewText:{y:0, opacity:1, transition:{duration:1}},
+    initialText2: {y:100, opacity:0}
   } 
 
   return (
@@ -38,15 +40,15 @@ const Hero = () => {
       <HeroContent id='c'>
         <HeroText>
           <HeroTextWrapper>
-            <HeroP>Brindamos productos de </HeroP>
-            <HeroH1> CALIDAD Y DURABILIDAD</HeroH1>
+            <HeroP variants={variants} initial="initialText" whileInView="whileInViewText" viewport="viewport">Brindamos producto de </HeroP>
+            <HeroH1 variants={variants} initial="initialText2" whileInView="whileInViewText" viewport="viewport"> CALIDAD Y DURABILIDAD</HeroH1>
           </HeroTextWrapper>
         </HeroText>
         <HeroImage id='i'>
           <HeroWrapper id='e'>
             <Image src='./assets/Rectangle 5.png'></Image>
             <Form1 variants={variants} initial="initial" whileInView="whileInView" viewport="viewport"></Form1>
-            <Form2 variants={variants} initial="initial" whileInView="whileInView" viewport="viewport"></Form2>
+            <Form2 variants={variants} initial="initial2" whileInView="whileInView" viewport="viewport"></Form2>
             
             </HeroWrapper>
             

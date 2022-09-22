@@ -7,6 +7,7 @@ export const HeroContainer = styled.div`
   z-index: 1;
   background: var(--BlueColor200);
   width:100%;
+  
 
   :before {
     content: "";
@@ -23,6 +24,8 @@ export const HeroContainer = styled.div`
     height: 150vh;
   }
 
+  
+
   @media screen and (max-width: 600px) {
     height: 135vh;
   }
@@ -36,8 +39,9 @@ export const HeroContainer = styled.div`
   }
 
   @media screen and (max-height: 800px) {
-    height: 110vh;
+    height: 150vh;
   }
+
 
   @media screen and (max-height: 700px) {
     height: 180vh;
@@ -68,6 +72,10 @@ export const HeroContent = styled.div`
   width: 100%;
   max-width:1680px;
   background: var(--BlueColor200);
+
+  @media screen and (max-width: 1024px) {
+    height: 150vh;
+  }
 `;
 
 export const HeroText = styled.div`
@@ -113,6 +121,11 @@ export const Image = styled.img`
   max-width: 416px;
   height: 583px;
   max-height:583px;
+top: 0;
+left: 900px;
+right: 0;
+bottom: 0;
+margin: auto;
 
   @media screen and (min-width: 1700px) {
     top: 3%;
@@ -122,43 +135,42 @@ export const Image = styled.img`
   }
 
   @media (min-width: 1700px) and (max-height:1050px) {
-    top: 10%;
-    left: 1070px;
+    top: 0;
+    left: 870px;
     width: 486px;
     height: 643px;
   }
 
   @media (min-width: 1700px) and (min-height:1050px) {
-    top: 10%;
-    left: 1070px;
-    width: 486px;
-    height: 643px;
+    position: absolute;
+top: 0;
+left: 900px;
+right: 0;
+bottom: 0;
+margin: auto;
   }
 
   @media (min-width: 1700px) and (max-height:920px) {
     top: 6%;
-    left: 1070px;
+    left: 850px;
     width: 486px;
     height: 643px;
   }
 
   @media  (min-width: 1700px) and (max-height:860px) {
     top: 0;
-    left: 1050px;
     width: 506px;
     height: 673px;
   }
 
   @media  (min-width: 1700px) and (max-height:800px) {
     top: -7%;
-    left: 1050px;
     width: 506px;
     height: 673px;
   }
   
   @media  (min-width: 1700px) and (max-height:700px) {
     top: -7%;
-    left: 1040px;
     width: 506px;
     height: 673px;
   }
@@ -166,22 +178,33 @@ export const Image = styled.img`
   
 
   @media screen and (max-width: 1600px) {
-    left: 1000px;
+    
   }
 
   @media screen and (max-width: 1440px) {
-    left: 920px;
+    left: 800px;
+  }
+
+  @media screen and (max-width: 1380px) {
+    left: 770px;
   }
 
   @media screen and (max-width: 1280px) {
-    left: 770px;
+    left: 670px;
   }
   @media screen and (max-width: 1190px) {
-    left: 730px;
+ 
     width: 380px;
     height: 531px;
-    top: 7%;
+    
   }
+
+  @media screen and (max-width: 1100px) {
+ 
+ width: 380px;
+ height: 531px;
+ left: 550px;
+}
 
   @media screen and (max-width: 1050px) {
     left: 620px;
@@ -199,7 +222,7 @@ export const Image = styled.img`
     width: 450px;
     height: 629px;
     top: 0%;
-    left: 35%;
+    left: 25%;
   }
 
   @media screen and (max-width: 720px) {
@@ -240,13 +263,15 @@ export const Image = styled.img`
   }
 `;
 
-export const HeroH1 = styled.h1`
+export const HeroH1 = styled(motion.h1)`
   color: var(--BlueColor);
   font-size: 120px;
   font-style: normal;
   font-weight: 500;
   line-height: 100px;
   letter-spacing: 0.04em;
+  cursor: pointer;
+  z-index: 9999;
 
   @media screen and (max-width: 1360px) {
     font-size: 100px;
@@ -300,7 +325,7 @@ export const HeroH1 = styled.h1`
   }
 `;
 
-export const HeroP = styled.p`
+export const HeroP = styled(motion.p)`
   color: var(--BlueColor);
   margin-bottom: 15px;
   font-style: normal;
@@ -471,7 +496,6 @@ export const Form = styled(motion.div)`
   height: 162.05px;
   z-index: -1;
 
-
   @media screen and (min-width: 1700px) {
     width: 275px;
     height: 190px;
@@ -480,6 +504,11 @@ export const Form = styled(motion.div)`
   @media  (min-width: 1700px) and (min-height:700px) {
     width: 225px;
   height: 162.05px;
+  }
+
+  @media screen and (max-width: 1600px) {
+    width: 200px;
+  height: 140.05px;
   }
   @media screen and (max-width: 1440px) {
     width: 175px;
@@ -534,9 +563,11 @@ export const Form = styled(motion.div)`
 
 export const Form1 = styled(Form)`
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
-  left: 989px;
+  left: 1000px;
   bottom: 50px;
   box-sizing: border-box;
+  position: absolute;
+margin: auto;
 
   @media screen and (min-width: 1700px) {
     left: 950px;
@@ -548,7 +579,7 @@ export const Form1 = styled(Form)`
   }
   
   @media (min-width: 1700px) and (min-height:1050px) {
-    left: 910px;
+    left: 960px;
     bottom: 20%;
   }
 
@@ -580,10 +611,22 @@ export const Form1 = styled(Form)`
     left: 860px;
   }
 
+  @media screen and (max-width: 1380px) {
+    left: 810px;
+  }
+
   @media screen and (max-width: 1280px) {
     left: 700px;
   }
 
+  @media screen and (max-width: 1190px) {
+    
+    bottom:80px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    left: 600px;
+  }
   @media screen and (max-width: 1050px) {
     left: 600px;
   }
@@ -595,12 +638,12 @@ export const Form1 = styled(Form)`
 
   @media screen and (max-width: 810px) {
     bottom: 80px;
-    left: 20%;
+    
   }
 
   @media screen and (max-width: 400px) {
     bottom: 50px;
-    left: 25%;
+    left: 30%;
   }
 `;
 
@@ -639,9 +682,13 @@ export const Form2 = styled(Form)`
   }
 
  
+
+  @media screen and (max-width: 1600px) {
+    right: 4%;
+  }
   @media screen and (max-width: 1440px) {
     top: 120px;
-    right: 4%;
+    
   }
 
   @media screen and (max-width: 1200px) {
@@ -742,6 +789,14 @@ export const ButtonHexa = styled(LinkS)`
 
   @media (max-width: 1000px) and (max-height: 1050px) {
     top: 550px;
+  }
+
+  @media (max-width: 1000px) and (max-height: 850px) {
+    top: 450px;
+  }
+
+  @media (max-width: 600px) and (max-height: 900px) {
+    top: 400px;
   }
 
   @media (max-width: 480px) and (max-height: 1050px) {

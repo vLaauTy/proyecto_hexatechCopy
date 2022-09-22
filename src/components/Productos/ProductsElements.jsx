@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const CategoryContainer = styled.div`
@@ -13,6 +14,15 @@ export const CategoryContainer = styled.div`
     position:relative;
     align-items:center;
   }
+
+  @media screen and (max-height:1000px) {
+    height:120vh;
+  }
+
+  @media screen and (max-height:800px) {
+    height:140vh;
+  }
+  
 `;
 
 export const CategoryWrapper = styled.div`
@@ -61,7 +71,7 @@ height:100%;
   }
 `;
 
-export const CategoryCard = styled.div`
+export const CategoryCard = styled(motion.div)`
   background: #ffffff;
   width: 434px;
   height: 585px;
@@ -311,17 +321,17 @@ margin-top:10px;
   cursor: pointer;
   position:absolute;
   pointer-events:all;
-  top:250px;
+  top:120px;
   left:140px;
 
   @media screen and (max-width:1280px) {
     left:110px;
-    top:230px;
+    top:130px;
   }
 
   @media screen and (max-width:1090px) {
     left:90px;
-    top:230px;
+    top:180px;
     width:140px;
     height:110px;
   }
@@ -330,7 +340,7 @@ margin-top:10px;
 
   @media screen and (max-width:768px) {
     left:110px;
-    top:300px;
+    top:260px;
     width:130px;
     height:100px;
   }
@@ -338,10 +348,9 @@ margin-top:10px;
   
   @media screen and (max-width:380px) {
     left:110px;
-    top:300px;
     width:120px;
     height:90px;
-    top:320px;
+    top:280px;
   }
 
 

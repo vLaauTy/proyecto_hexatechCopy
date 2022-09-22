@@ -18,6 +18,17 @@ import {
 
 
 const ProductCards = () => {
+  const variants = {
+    initial  : {x: 100, opacity: 0},
+    whileInView:{x:0, opacity:1, transition:{duration:1}},
+    
+    initial2: {x: -100, opacity: 0},
+    initialText: {y:-100, opacity:0},
+    whileInViewText:{y:0, opacity:1, transition:{duration:0.6}},
+    whileInViewText2:{y:0, opacity:1, transition:{duration:0.9}},
+    whileInViewText3:{y:0, opacity:1, transition:{duration:1.2}},
+    initialText2: {y:100, opacity:0}
+  } 
 
     const [mouse, setMouse] = useState(false);
   const [mouse2, setMouse2] = useState(false);
@@ -25,7 +36,7 @@ const ProductCards = () => {
   return (
     <CategoryCards>
           
-              <CategoryCard>
+              <CategoryCard variants={variants} initial="initialText2" whileInView="whileInViewText" viewport="viewport">
                 <CategoryCardInfo>
                   <CategoryIcon src='./assets/Temperatura-oscuro.png' />
                   <CategoryName>Hexa Temp</CategoryName>
@@ -36,16 +47,16 @@ const ProductCards = () => {
                   <CategoryPolygon></CategoryPolygon>
                   <CategoryImageContainer>
                     <CategoryImage src="./assets/Estufa2.png"></CategoryImage>
-                    <CategoryButtonimg
+                    <a href="https://www.facebook.com/" target='_blank'><CategoryButtonimg
                       onMouseEnter={() => setMouse(true)}
                       onMouseLeave={() => setMouse(false)}
                       src={mouse ? "./assets/BotonFlecha.png" : "./assets/BotonVer.png"}
-                    ></CategoryButtonimg>
+                    ></CategoryButtonimg></a>
                   </CategoryImageContainer>
                 </CategoryCardInfo>
               </CategoryCard>
 
-              <CategoryCard>
+              <CategoryCard variants={variants} initial="initialText2" whileInView="whileInViewText2" viewport="viewport">
                 <CategoryCardInfo>
                   <CategoryIcon src='./assets/Rectangle 13.png' />
                   <CategoryName>Hexa Tech</CategoryName>
@@ -56,6 +67,7 @@ const ProductCards = () => {
                   <CategoryPolygon></CategoryPolygon>
                   <CategoryImageContainer>
                     <CategoryImage src="./assets/Estufa2.png"></CategoryImage>
+                    
                     <CategoryButtonimg
                       onMouseEnter={() => setMouse2(true)}
                       onMouseLeave={() => setMouse2(false)}
@@ -65,7 +77,7 @@ const ProductCards = () => {
                 </CategoryCardInfo>
               </CategoryCard>
 
-              <CategoryCard>
+              <CategoryCard variants={variants} initial="initialText2" whileInView="whileInViewText3" viewport="viewport">
                 <CategoryCardInfo>
                   <CategoryIcon src='./assets/Quimica-claro.png' />
                   <CategoryName>Hexa Chem</CategoryName>
