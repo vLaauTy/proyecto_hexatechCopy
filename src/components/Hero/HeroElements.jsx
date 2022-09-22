@@ -47,6 +47,11 @@ export const HeroContainer = styled.div`
     height: 180vh;
   }
 
+
+  @media (max-width: 1050px) and (max-height: 800px) {
+    min-height: 170vh;
+  }
+
   @media (max-width: 480px) and (max-height: 800px) {
     height: 130vh;
   }
@@ -229,21 +234,21 @@ margin: auto;
     width: 450px;
     height: 600px;
     top: 0%;
-    left: 28%;
+    left: 20%;
   }
 
   @media screen and (max-width: 600px) {
     width: 325px;
     height: 485px;
     top: 0%;
-    left: 30%;
+    left: 18%;
   }
 
   @media screen and (max-width: 480px) {
     width: 275px;
     height: 385px;
     top: 0%;
-    left: 30%;
+    left: 17%;
   }
 
   @media screen and (max-width: 440px) {
@@ -643,7 +648,7 @@ margin: auto;
 
   @media screen and (max-width: 400px) {
     bottom: 50px;
-    left: 30%;
+    left: 23%;
   }
 `;
 

@@ -224,7 +224,12 @@ position:absolute;
  ${CategoryCardInfo}:hover & {
   transform: translateY(-20px);
     transition:all 0.3s ease-in-out;
+    @media screen and (max-width:758px) {
+      transform:none;
+    }
   }
+
+
 
   
 
@@ -321,17 +326,17 @@ margin-top:10px;
   cursor: pointer;
   position:absolute;
   pointer-events:all;
-  top:120px;
+  top:14rem;
   left:140px;
 
   @media screen and (max-width:1280px) {
     left:110px;
-    top:130px;
+    
   }
 
   @media screen and (max-width:1090px) {
     left:90px;
-    top:180px;
+    
     width:140px;
     height:110px;
   }
@@ -340,7 +345,7 @@ margin-top:10px;
 
   @media screen and (max-width:768px) {
     left:110px;
-    top:260px;
+    top:20rem;
     width:130px;
     height:100px;
   }
@@ -350,7 +355,7 @@ margin-top:10px;
     left:110px;
     width:120px;
     height:90px;
-    top:280px;
+    
   }
 
 

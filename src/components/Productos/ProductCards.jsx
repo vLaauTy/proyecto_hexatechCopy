@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 import {
 
   CategoryButtonimg,
@@ -18,16 +18,36 @@ import {
 
 
 const ProductCards = () => {
-  const variants = {
-    initial  : {x: 100, opacity: 0},
-    whileInView:{x:0, opacity:1, transition:{duration:1}},
+
+ const [windowsSize, setWindowsSize] = useState({
+  width:undefined,
+  height:undefined
+ });
+
+
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowsSize({
+        width:window.innerWidth,
+        height:window.innerHeight,
+      })
+    }
+
+    window.addEventListener('resize',handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener('resize',handleResize)
+
     
-    initial2: {x: -100, opacity: 0},
-    initialText: {y:-100, opacity:0},
+  },[]);
+  const variants = {
     whileInViewText:{y:0, opacity:1, transition:{duration:0.6}},
     whileInViewText2:{y:0, opacity:1, transition:{duration:0.9}},
     whileInViewText3:{y:0, opacity:1, transition:{duration:1.2}},
-    initialText2: {y:100, opacity:0}
+    initialText2: {y:100, opacity:0},
+    noneText2:{y:0,opacity:1}
   } 
 
     const [mouse, setMouse] = useState(false);
@@ -36,7 +56,7 @@ const ProductCards = () => {
   return (
     <CategoryCards>
           
-              <CategoryCard variants={variants} initial="initialText2" whileInView="whileInViewText" viewport="viewport">
+              <CategoryCard variants={variants} initial={'initialText2'} whileInView="whileInViewText2" viewport="viewport">
                 <CategoryCardInfo>
                   <CategoryIcon src='./assets/Temperatura-oscuro.png' />
                   <CategoryName>Hexa Temp</CategoryName>

@@ -75,6 +75,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   margin-right: -22px;
+
   width:50%;
   @media screen and (max-width: 1024px) {
     display: none;
@@ -82,7 +83,7 @@ export const NavMenu = styled.ul`
 `
 export const NavItem = styled.li`
   height: 80px;
-  padding:1rem 0;
+  
 `
 export const NavLinks = styled(LinkS)`
   color: var(--NavLinkOff);
@@ -91,7 +92,7 @@ export const NavLinks = styled(LinkS)`
   padding: 0 ;
   height: 100%;
   cursor: pointer;
-  margin:0 3rem;
+  margin:0 2.8rem;
   font-family:'Teko', sans-serif;
   font-weight:300;
   font-size:1.5rem;
