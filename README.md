@@ -8,4 +8,7 @@
 
 ### Para la alerta de envio de email se utilizo toastify
 
+# ATENCION!
+## Se recomiendo usar un navegador diferente a google chrome, ya que este puede tener complicaciones de rendimiento debido a las animaciones realizadas con framer motion
+
 ## El mail donde llegaran los mensajes es en hexamensajes@gmail.com
